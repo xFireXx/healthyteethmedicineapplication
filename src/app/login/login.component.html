@@ -1,0 +1,61 @@
+<nz-row nzJustify="center" nzAlign="middle" style="height: 100vh">
+  <div class="login-box">
+    <nz-col [nzSpan]="24" nzJustify="center">
+      <h1 class="h1-login-headline">Logowanie</h1>
+    </nz-col>
+    <nz-col [nzSpan]="24">
+      <label for="login"> Login </label>
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column">
+      <input
+        nz-input
+        placeholder="Wpisz login"
+        type="text"
+        #email
+        required
+        id="login"
+        class="input-form"
+      />
+    </nz-col>
+    <nz-col [nzSpan]="24">
+      <label for="password"> Hasło </label>
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column">
+      <input
+        type="password"
+        nz-input
+        placeholder="Wpisz hasło"
+        id="password"
+        required
+        class="input-form"
+        #password
+      />
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column">
+      <p #errorParagraph></p>
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column">
+      <a href="#" class="link">Przypomnij hasło</a>
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column left-side-button">
+      <button
+        (click)="onSignin(email.value, password.value)"
+        class="button-login"
+      >
+        Zaloguj się
+      </button>
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column column-link-register">
+      <button type="button" (click)="signInWithGoogle()" class="button-login-google">
+        Zaloguj się przez
+        <img src="../../assets/icons8-google.svg" alt="Google Icon" class="google-icon">
+    </button>
+    
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column column-link-register">
+      <a routerLink="/register" class="link-to-register"
+        >Przejdź do strony rejestracji</a
+      >
+    </nz-col>
+  </div>
+</nz-row>

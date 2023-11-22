@@ -1,0 +1,90 @@
+.login-box {
+    background-color: rgba(226, 239, 241, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    margin: 10px;
+}
+
+.input-field-column {
+    margin: 10px 0 10px;
+}
+
+.h1-login-headline {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.link {
+    color: #000;
+}
+
+.link-to-register {
+    color: #000;
+}
+
+.column-link-register {
+    text-align: center;
+}
+
+.left-side-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-login {
+    border-radius: 20px;
+    background-color: #457EAC;
+    border: 0;
+    padding: 10px 20px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.button-login:hover {
+    background-color: #2D5D7B;
+    cursor: pointer;
+}
+
+.input-form {
+    height: 50px;
+}
+
+.button-login-google {
+    background: transparent;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+
+.button-login-google:hover {
+    background: #457EAC;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.google-icon {
+    width: 30px;
+    margin-left: 5px;
+
+}
+
+@media screen and (min-width: 992px) {
+    .login-box {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .login-box {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .login-box {
+        width: 30%;
+    }
+}

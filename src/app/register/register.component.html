@@ -1,0 +1,46 @@
+<nz-row nzJustify="center" nzAlign="middle" style="height: 100vh">
+  <div class="register-box" *ngIf="!isSignedIn">
+    <nz-col [nzSpan]="24" nzJustify="center">
+      <h1 class="h1-register-headline">Rejestracja</h1>
+    </nz-col>
+    <nz-col [nzSpan]="24">
+      <label for="login"> Login </label>
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column">
+      <input
+        type="text"
+        #emailSignup
+        nz-input
+        placeholder="Wpisz login"
+        class="input-form"
+      />
+    </nz-col>
+    <nz-col [nzSpan]="24">
+      <label for="password"> Hasło </label>
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column">
+      <input
+        type="password"
+        #passwordSignup
+        nz-input
+        placeholder="Wpisz hasło"
+        id="password"
+        class="input-form"
+        #password
+      />
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column left-side-button">
+      <button
+        (click)="onSignup(emailSignup.value, passwordSignup.value)"
+        class="button-register"
+      >
+        Zarejestruj się
+      </button>
+    </nz-col>
+    <nz-col [nzSpan]="24" class="input-field-column column-link-register">
+      <a routerLink="/login" class="link-to-login"
+        >Przejdź do strony logowania</a
+      >
+    </nz-col>
+  </div>
+</nz-row>
