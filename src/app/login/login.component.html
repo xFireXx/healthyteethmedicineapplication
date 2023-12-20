@@ -21,15 +21,14 @@
       <label for="password"> Hasło </label>
     </nz-col>
     <nz-col [nzSpan]="24" class="input-field-column">
-      <input
-        type="password"
-        nz-input
-        placeholder="Wpisz hasło"
-        id="password"
-        required
-        class="input-form"
-        #password
-      />
+      <lib-password-input
+        label=""
+        [enableCapsLockCheck]="true"
+        [lengthPassword]="10"
+        [placeholder]="'Wpisz hasło'"
+        [customClass]="'input-form'"
+        (passwordChange)="onPasswordChange($event)"
+      ></lib-password-input>
     </nz-col>
     <nz-col [nzSpan]="24" class="input-field-column">
       <p #errorParagraph></p>
@@ -38,19 +37,23 @@
       <a href="#" class="link">Przypomnij hasło</a>
     </nz-col>
     <nz-col [nzSpan]="24" class="input-field-column left-side-button">
-      <button
-        (click)="onSignin(email.value, password.value)"
-        class="button-login"
-      >
+      <button (click)="onSignin(email.value, password)" class="button-login">
         Zaloguj się
       </button>
     </nz-col>
     <nz-col [nzSpan]="24" class="input-field-column column-link-register">
-      <button type="button" (click)="signInWithGoogle()" class="button-login-google">
+      <button
+        type="button"
+        (click)="signInWithGoogle()"
+        class="button-login-google"
+      >
         Zaloguj się przez
-        <img src="../../assets/icons8-google.svg" alt="Google Icon" class="google-icon">
-    </button>
-    
+        <img
+          src="../../assets/icons8-google.svg"
+          alt="Google Icon"
+          class="google-icon"
+        />
+      </button>
     </nz-col>
     <nz-col [nzSpan]="24" class="input-field-column column-link-register">
       <a routerLink="/register" class="link-to-register"

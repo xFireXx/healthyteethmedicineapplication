@@ -12,13 +12,18 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { FormsModule } from '@angular/forms';
+import { InputPasswordComponent } from './utils/input-password/input-password.component';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { PasswordInputModule } from 'password-input';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    InputPasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,9 @@ import { FormsModule } from '@angular/forms';
     NzButtonModule,
     NzInputModule,
     FormsModule,
+    NzIconModule,
+    HttpClientModule,
+    PasswordInputModule
   ],
   providers: [LoginService, RegisterService],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { LoginService } from './services/login.service';
+import { InputPasswordComponent } from '../utils/input-password/input-password.component';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,12 @@ export class LoginComponent {
   constructor(public firebaseService: LoginService) {}
 
   isSignedIn = false;
+
+  password = '';
+
+  onPasswordChange(password: string) {
+    this.password = password;
+  }
   
   async onSignin(email: string, password: string) {
     await this.firebaseService.signin(email, password);

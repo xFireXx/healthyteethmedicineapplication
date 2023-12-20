@@ -7,19 +7,11 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   @Output() isLogout = new EventEmitter<void>();
 
   constructor(public firebaseService: LoginService, private router: Router) {}
-
-  ngOnInit(): void {
-    if (localStorage.getItem('user') !== null) {
-      this.router.navigate(['/home'])
-    } else {
-      this.router.navigate(['/login'])
-    }
-  }
 
   logout() {
     this.firebaseService.logout();
